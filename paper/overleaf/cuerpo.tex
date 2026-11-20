@@ -1,0 +1,219 @@
+\begin{abstract}
+El relleno sanitario de Tehuac\'an, en la junta auxiliar de Santa Mar\'ia Coapan (Puebla), oper\'o cerca de tres d\'ecadas. La comunidad y la organizaci\'on Greenpeace afirman que recibi\'o residuos peligrosos industriales y biol\'ogico-infecciosos. La PROFEPA orden\'o su clausura total y definitiva el 27 de junio de 2023 y pidi\'o un estudio del da\~no ambiental y un plan de remediaci\'on. Hasta donde se encontr\'o en fuentes p\'ublicas, ese estudio no se ha presentado. Este trabajo propone c\'omo usar m\'etodos geof\'isicos para responder tres preguntas que hoy no tienen respuesta medida: d\'onde est\'an los residuos, hasta d\'onde lleg\'o el lixiviado y si hay zonas con material met\'alico enterrado. Se dise\~na un levantamiento con tomograf\'ia de resistividad el\'ectrica (ERT) y polarizaci\'on inducida (IP), electromagn\'etico en el dominio de frecuencia (EM), magnetometr\'ia y radar de penetraci\'on terrestre (GPR), con piez\'ometros para confirmar. Para mostrar qu\'e se espera ver, se simul\'o un perfil sint\'etico de ERT (736 mediciones, 3\,\% de ruido). La inversi\'on recuper\'o bien el cuerpo de residuos (31\,\ohmm\ contra 30\,\ohmm\ del modelo) y ubic\'o el lixiviado, pero lo extendi\'o en profundidad y lo mostr\'o m\'as resistivo (11\,\ohmm\ contra 6\,\ohmm). No hay datos de campo: todo resultado es una predicci\'on, y la ubicaci\'on exacta del pol\'igono debe confirmarse en campo.
+\end{abstract}
+
+\begin{IEEEkeywords}
+geof\'isica ambiental, relleno sanitario, lixiviado, tomograf\'ia de resistividad el\'ectrica, polarizaci\'on inducida, Tehuac\'an
+\end{IEEEkeywords}
+
+\section{Introducci\'on}
+Un relleno sanitario bien dise\~nado aisla los residuos del suelo y del agua subterr\'anea. Un tiradero sin control no lo hace: el agua de lluvia atraviesa los residuos y forma lixiviado, un l\'iquido con sales, materia org\'anica y, a veces, metales. Si ese l\'iquido llega al acu\'ifero, la contaminaci\'on se mueve bajo tierra sin que se vea en la superficie.
+
+La geof\'isica ayuda en este problema porque el lixiviado conduce muy bien la electricidad. Por eso baja la resistividad del terreno, y la ERT puede dibujarlo desde la superficie sin excavar \cite{maurya2017,helene2020}. La polarizaci\'on inducida (IP) agrega informaci\'on sobre el tipo de material, por ejemplo, residuos con metales \cite{abdulrahman2016}.
+
+El caso elegido es el relleno sanitario municipal de Tehuac\'an, en territorio de Santa Mar\'ia Coapan, Puebla. Es un problema ambiental real, tiene una resoluci\'on oficial de clausura y, seg\'un fuentes p\'ublicas, sigue sin estudio de da\~no ni remediaci\'on \cite{greenpeace}. Este informe no presenta mediciones de campo. Es un proyecto de dise\~no: define el problema, propone el levantamiento y muestra, con una simulaci\'on, qu\'e se espera ver y qu\'e no.
+
+\section{Problem\'atica a resolver}
+\subsection{Qu\'e pas\'o}
+La Tabla~\ref{tab:cron} resume la historia del sitio. Las fuentes no coinciden en el a\~no de inicio (1993 o 1995), as\'i que se reportan ambas.
+
+\begin{table}[!t]
+\caption{Cronolog\'ia del relleno sanitario de Tehuac\'an}
+\label{tab:cron}
+\centering
+\small
+\begin{tabular}{@{}p{0.2\columnwidth}p{0.72\columnwidth}@{}}
+\toprule
+Fecha & Hecho (fuente)\\
+\midrule
+1993--1995 & Inicio de operaci\'on: 1993 \cite{greenpeace}; junio de 1995, con 15 a\~nos de vida \'util estimada \cite{linares}.\\
+2010 & A\~no en que, seg\'un el proyecto original, deb\'ia dejar de operar \cite{linares}.\\
+Oct. 2021 & La comunidad lo cierra de hecho (7 de octubre) \cite{greenpeace}.\\
+Mayo 2022 & Incendio en el sitio. El Comit\'e de Bienes de Coapan afirma que borra evidencia \cite{ciudadano}.\\
+2022 & La Smadsot coloca sellos de clausura (nota del 13 de junio) \cite{publimetro}.\\
+27 jun. 2023 & Resoluci\'on de la PROFEPA: clausura total y definitiva; retirar residuos peligrosos y RPBI, estudiar el da\~no y presentar un plan de remediaci\'on \cite{greenpeace}.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Qu\'e se dice y qu\'e est\'a comprobado}
+Hay que separar los hechos documentados de las afirmaciones. La clausura de la PROFEPA y las fechas son documentadas \cite{greenpeace}. En cambio, lo siguiente son afirmaciones de la comunidad y de organizaciones, y este trabajo no las verifica: que se depositaron lodos industriales de lavander\'ias de mezclilla y residuos hospitalarios \cite{ciudadano,greenpeace}, que se acumularon 3.7 millones de toneladas \cite{greenpeace}, que el sitio creci\'o 18 ha dentro de la Reserva de la Biosfera Tehuac\'an-Cuicatl\'an \cite{ciudadano}, que hay filtraci\'on de lixiviados a la reserva y que hay casos de c\'ancer \cite{desinformemonos,ciudadano}. Ninguna de esas cifras viene de un estudio t\'ecnico independiente. La superficie tampoco es clara: 7.2\,ha autorizadas y un predio de unas 10\,ha seg\'un la tesis de Linares \cite{linares}, que tambi\'en recoge cifras de 6 a 10\,ha.
+
+\subsection{Pregunta que se quiere responder}
+\emph{\textquestiondown D\'onde est\'an los residuos y el lixiviado en el subsuelo, hasta qu\'e profundidad llegan y hacia d\'onde se mueven?} Sin esa respuesta no se puede dise\~nar una remediaci\'on, que es justo lo que la PROFEPA pidi\'o.
+
+\section{Localizaci\'on}
+Santa Mar\'ia Coapan es una junta auxiliar del municipio de Tehuac\'an, en el sureste del estado de Puebla. El relleno est\'a en el kil\'ometro 12.2 de la carretera federal Tehuac\'an--Huajuapan \cite{linares}. La iglesia de Coapan queda en 18.4274°\,N y 97.4060°\,O (decodificado del c\'odigo Plus Code publicado en \cite{gcatholic}), dentro del pol\'igono del municipio de Tehuac\'an (Fig.~\ref{fig:loc}). El mapa marca la localidad, no el pol\'igono del relleno: no se encontr\'o una fuente p\'ublica con sus coordenadas, y se debe medir en campo o sobre una imagen satelital antes de levantar.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=0.92\textwidth]{f1_localizacion.png}
+\caption{Localizaci\'on. (a) M\'exico y el estado de Puebla. (b) Municipios de Puebla; en rojo, Tehuac\'an. (c) Municipio de Tehuac\'an con la ciudad y la iglesia de Santa Mar\'ia Coapan (tri\'angulo). Elaboraci\'on propia con l\'imites estatales y municipales de c\'odigo abierto \cite{natural,phantom}.}
+\label{fig:loc}
+\end{figure*}
+
+El sitio est\'a en el valle de Tehuac\'an, una depresi\'on tect\'onica formada por fallas normales del sistema de la falla de Oaxaca. Sus dep\'ositos cenozoicos incluyen la Formaci\'on Tehuac\'an (Oligoceno tard\'io a Mioceno medio), con conglomerados; en algunos dep\'ositos del valle hay capas delgadas de yeso \cite{davalos2007}. Esto importa para la interpretaci\'on: el yeso y otras sales naturales tambi\'en bajan la resistividad, y pueden parecerse al lixiviado. El acu\'ifero regional m\'as probable es el Valle de Tehuac\'an (clave 2105) \cite{dof2013}; falta confirmar si el sitio cae dentro de su pol\'igono. No se encontr\'o la profundidad del nivel del agua en el sitio; es un dato que falta y se medir\'a en los piez\'ometros.
+
+\section{Objetivos}
+\subsection{General}
+Proponer un levantamiento geof\'isico integrado para delimitar los residuos y el lixiviado del relleno de Santa Mar\'ia Coapan, y mostrar con una simulaci\'on qu\'e se puede resolver con ese dise\~no.
+
+\subsection{Espec\'ificos}
+\begin{enumerate}
+\item Reunir y ordenar la informaci\'on p\'ublica del caso, separando hechos de afirmaciones.
+\item Elegir los m\'etodos geof\'isicos adecuados para cada pregunta y dise\~nar la adquisici\'on de datos.
+\item Simular un perfil de ERT para estimar qu\'e tan bien se recuperar\'ian el cuerpo de residuos y el lixiviado.
+\item Proponer c\'omo confirmar las anomal\'ias con piez\'ometros y muestras.
+\item Plantear un plan de acci\'on y de monitoreo para apoyar la remediaci\'on.
+\end{enumerate}
+
+\section{Justificaci\'on}
+La PROFEPA orden\'o un estudio del da\~no y un plan de remediaci\'on \cite{greenpeace}, pero no hay un mapa del subsuelo que diga d\'onde actuar. Perforar sin gu\'ia es caro y puede pasar de largo el lixiviado. Los m\'etodos el\'ectricos y electromagn\'eticos cubren el predio completo en pocos d\'ias, no abren el terreno y orientan d\'onde conviene perforar. Adem\'as, el sitio est\'a en una subzona de uso especial de la Reserva de la Biosfera Tehuac\'an-Cuicatl\'an \cite{publimetro}, as\'i que saber si el lixiviado avanza hacia el \'area protegida tiene valor ambiental directo. Por \'ultimo, el relleno deb\'ia cerrar en 2010 y sigui\'o operando \cite{linares}; documentar el da\~no con datos f\'isicos da una base t\'ecnica com\'un a la comunidad, a las autoridades y a quien haga la remediaci\'on.
+
+\section{M\'etodos geof\'isicos propuestos}
+La Tabla~\ref{tab:met} resume qu\'e m\'etodo responde qu\'e pregunta. Los valores de resistividad y cargabilidad son de otros rellenos \cite{abdulrahman2016,rawfill}; en Coapan pueden ser distintos.
+
+\begin{table*}[!t]
+\caption{M\'etodos, pregunta que responden y respuesta esperada}
+\label{tab:met}
+\centering
+\small
+\begin{tabular}{@{}p{0.11\textwidth}p{0.27\textwidth}p{0.30\textwidth}p{0.26\textwidth}@{}}
+\toprule
+M\'etodo & Pregunta & Respuesta esperada & Limitaci\'on principal\\
+\midrule
+ERT & \textquestiondown D\'onde est\'an los residuos y el lixiviado, y a qu\'e profundidad? & Residuos: 0.5 a 30\,\ohmm\ \cite{rawfill}. Lixiviado: menos de 10\,\ohmm\ \cite{abdulrahman2016}. Fondo seco: decenas de \ohmm. & Las sales naturales tambi\'en bajan la resistividad. Resoluci\'on baja en profundidad.\\
+IP & \textquestiondown Qu\'e tipo de material es? & Residuos con metales: cargabilidad alta (m\'as de 70\,ms en un caso). Lixiviado disuelto: baja (menos de 20\,ms) \cite{abdulrahman2016}. & Interpretaci\'on discutida en la literatura; ruido mayor que en ERT.\\
+EM (FDEM) & \textquestiondown Cu\'al es la extensi\'on lateral de la zona conductora? & Mapa de conductividad aparente; anomal\'ia alta sobre residuos y lixiviado. & Poca resoluci\'on en profundidad; sensible a cercas y metales.\\
+Magnetometr\'ia & \textquestiondown Hay tambores o chatarra met\'alica enterrada? & Anomal\'ias dipolares locales en zonas con metal. & Las latas y el hierro de los residuos urbanos dan se\~nal de fondo.\\
+GPR & \textquestiondown Cu\'anto mide la cubierta y hay celdas o zanjas? & Reflectores someros de la cubierta y bordes de celdas. & Se atenúa muy r\'apido en suelo arcilloso o con lixiviado.\\
+Piez\'ometros y muestras & \textquestiondown La anomal\'ia es contaminaci\'on? & Nivel del agua, conductividad el\'ectrica, iones y metales. & Es puntual y m\'as caro; sirve para calibrar, no para mapear.\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+La ERT es el m\'etodo central porque la resistividad responde directo a la salinidad del agua en el terreno. La IP se mide con los mismos equipos y electrodos, as\'i que su costo extra es bajo. El EM cubre r\'apido todo el predio y decide d\'onde poner los perfiles de ERT. La magnetometr\'ia se agrega por la sospecha de residuos industriales met\'alicos. El GPR se usa solo en tramos cortos. Ning\'un m\'etodo basta solo, y por eso se proponen varios y una confirmaci\'on directa.
+
+\section{Dise\~no de adquisici\'on de datos}
+La Fig.~\ref{fig:dis} muestra el dise\~no en coordenadas locales, con un pol\'igono esquem\'atico de 8.2\,ha (similar a las 7.2 a 10\,ha de las fuentes). No es el contorno real del sitio. Cuando se tenga el pol\'igono, se mover\'an los perfiles para cubrirlo.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.84\columnwidth]{f2_diseno.png}
+\caption{Dise\~no de adquisici\'on propuesto. Perfiles ERT/IP (L1--L6 y T1--T2), perfil de fondo (R1), malla EM y magnetom\'etrica y piez\'ometros. Esquema propio; el pol\'igono es aproximado.}
+\label{fig:dis}
+\end{figure}
+
+\begin{table}[!t]
+\caption{Par\'ametros de adquisici\'on propuestos}
+\label{tab:par}
+\centering
+\small
+\begin{tabular}{@{}p{0.26\columnwidth}p{0.66\columnwidth}@{}}
+\toprule
+Elemento & Par\'ametro\\
+\midrule
+ERT/IP & 48 electrodos cada 5\,m (235\,m por perfil). Arreglo Wenner--Schlumberger. 6 perfiles E--O separados 40\,m y 2 transversales N--S. Perfil de fondo R1 fuera del sitio.\\
+Profundidad & Unos 30\,m en el centro del perfil (0.17 veces la apertura m\'axima \cite{edwards1977}).\\
+IP & Dominio del tiempo, misma l\'inea que la ERT.\\
+EM (FDEM) & Estaciones cada 10\,m en l\'ineas cada 20\,m, en todo el predio y 50\,m alrededor.\\
+Magnetometr\'ia & L\'ineas cada 5\,m, lecturas cada 1\,m.\\
+GPR & Tramos de 50 a 100\,m sobre L2 y L5.\\
+Piez\'ometros & 4 puntos (P1 a P4) en tri\'angulo para obtener el sentido del flujo; muestreo de agua y suelo.\\
+Posici\'on & GPS diferencial en electrodos y estaciones, con topograf\'ia a lo largo de cada perfil.\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Los perfiles de 235\,m con electrodos cada 5\,m dan una resoluci\'on de unos 5\,m en lo horizontal y menor en profundidad. El perfil de fondo R1 es clave: sirve para saber qu\'e resistividad tiene el terreno natural sin residuos, y as\'i separar el efecto del lixiviado del de las sales naturales. Los perfiles T1 y T2 cruzan los perfiles L1 a L6 y permiten revisar que las anomal\'ias coincidan en los cruces. Se debe medir la resistencia de contacto de cada electrodo y repetir las mediciones con error mayor a 3\,\%. El levantamiento se estima en unos 10 d\'ias de campo (8 d\'ias de ERT/IP, 1 de EM y magnetometr\'ia, 1 de GPR); es una estimaci\'on para planear, no un dato medido. Por la historia del sitio (incendio, residuos peligrosos), el equipo debe revisar antes si hay gas o zonas inestables.
+
+\section{Procesamiento e interpretaci\'on esperada}
+\subsection{Procesamiento}
+Los datos de ERT se editar\'an para quitar mediciones con ruido y se invertir\'an en 2D con topograf\'ia, con un criterio de suavidad. Se reportar\'a el ajuste (RMS) y la zona que los datos s\'i alcanzan a ver, y no se interpretar\'a nada fuera de ella \cite{loke1996}. La IP se invertir\'a de forma lineal, con el modelo de resistividad como base. El EM se interpolar\'a a un mapa de conductividad aparente. La magnetometr\'ia se corregir\'a por variaci\'on diurna y se mapear\'a la anomal\'ia de campo total.
+
+\subsection{Simulaci\'on sint\'etica}
+Para saber qu\'e se puede ver, se hizo una simulaci\'on con un c\'odigo propio de modelado directo e inversi\'on en 2D. Se construy\'o un modelo sint\'etico, \emph{inventado con valores de la literatura}, con una cubierta seca (120\,\ohmm), terreno natural (90\,\ohmm), roca a m\'as de 28\,m (300\,\ohmm), un cuerpo de residuos entre 55 y 165\,m de distancia y 1.5 a 14\,m de profundidad (30\,\ohmm), un lixiviado debajo y al este (6\,\ohmm) y una bolsa de lodos salinos de 20\,m por 4\,m (8\,\ohmm). Se calcularon 736 mediciones con el arreglo Wenner--Schlumberger y 48 electrodos cada 5\,m, se les agreg\'o 3\,\% de ruido y se invirtieron con una malla distinta a la del modelo directo, para no favorecer el resultado. \emph{Estos no son datos de campo}: los valores y las formas son supuestos.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.92\columnwidth]{f3_sintetico.png}
+\caption{Simulaci\'on sint\'etica de un perfil ERT. (a) Modelo verdadero inventado. (b) Resistividad aparente simulada con 3\,\% de ruido. (c) Modelo invertido (RMS = 2.7\,\%); las l\'ineas punteadas marcan los cuerpos del modelo verdadero. Elaboraci\'on propia.}
+\label{fig:sint}
+\end{figure}
+
+\begin{table}[!t]
+\caption{Recuperaci\'on de los cuerpos en la simulaci\'on (mediana del modelo invertido)}
+\label{tab:rec}
+\centering
+\small
+\begin{tabular}{@{}p{0.34\columnwidth}cc@{}}
+\toprule
+Zona & Verdadero (\ohmm) & Invertido (\ohmm)\\
+\midrule
+Residuos (1.5--14\,m) & 30 & 31\\
+Lixiviado (14--24\,m) & 6 & 11\\
+Bolsa de lodos (3--7\,m) & 8 & 11\\
+Terreno natural, borde & 90 & 89\\
+Debajo del lixiviado (26--35\,m) & 90 & 19\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Lectura de la simulaci\'on}
+La inversi\'on ajust\'o los datos con RMS de 2.7\,\% y recuper\'o bien lo grande (Fig.~\ref{fig:sint}, Tabla~\ref{tab:rec}). El cuerpo de residuos qued\'o en su lugar y con su valor (31 contra 30\,\ohmm). El lixiviado aparece como una zona de baja resistividad en la posici\'on correcta, pero con tres defectos que hay que tener presentes al interpretar datos reales:
+
+\begin{itemize}
+\item La resistividad se recupera m\'as alta (11\,\ohmm\ contra 6\,\ohmm), porque la inversi\'on suaviza los contrastes.
+\item El lixiviado se extiende hacia abajo: entre 26 y 35\,m el modelo da 19\,\ohmm\ donde el valor verdadero es 90\,\ohmm. Un lixiviado real no se debe dar por profundo solo por ese borde; ah\'i los datos casi no tienen sensibilidad.
+\item La bolsa de lodos (20 por 4\,m) aparece como una anomal\'ia d\'ebil pegada a los residuos. Se ve algo, pero no se podr\'ia distinguir del cuerpo de residuos sin otro dato, como magnetometr\'ia o IP.
+\end{itemize}
+
+La roca de 300\,\ohmm\ tampoco se recupera con su valor (el modelo da unos 143\,\ohmm\ en el fondo), porque los datos casi no llegan ah\'i. Con datos reales, el contraste entre los residuos (30\,\ohmm) y el terreno natural (90\,\ohmm) es moderado; si el terreno natural de Coapan ya es conductor por sales o yeso, ese contraste ser\'a menor y la anomal\'ia ser\'a m\'as ambigua.
+
+\subsection{C\'omo se interpretar\'a con datos reales}
+Se propone una regla simple: una zona se llamar\'a \emph{probable lixiviado} solo si cumple tres condiciones. Primero, resistividad menor que el valor del perfil de fondo R1 (y, como gu\'ia, menor de 10\,\ohmm\ \cite{abdulrahman2016}). Segundo, aparece en perfiles que se cruzan. Tercero, coincide con una conductividad de agua alta en un piez\'ometro cercano. Si falta la \'ultima, se llamar\'a \emph{anomal\'ia conductora sin confirmar}. Los cuerpos de alta cargabilidad se tomar\'an como \emph{posible zona de residuos con metales} y se contrastar\'an con la magnetometr\'ia. Ninguna anomal\'ia se presentar\'a como contaminaci\'on comprobada hasta tener muestras.
+
+\section{Impacto ambiental y plan de acci\'on}
+\subsection{Impacto esperado}
+El impacto se divide en lo que est\'a documentado y lo que se debe comprobar. Est\'a documentado que el sitio se clausur\'o y que no se ha cumplido con lo que ordena la resoluci\'on, seg\'un Greenpeace \cite{greenpeace}. Se debe comprobar si hay lixiviado en el acu\'ifero, si llega a la reserva, si hay metales en suelo y agua y si hay riesgo para la salud. El levantamiento propuesto no mide salud ni calidad del agua por s\'i solo: da el mapa que dice d\'onde medirlas.
+
+\subsection{Plan de acci\'on}
+\begin{enumerate}
+\item \textbf{Preparaci\'on (semanas 1--2).} Obtener el pol\'igono real del relleno, los permisos del municipio, la comunidad y las autoridades ambientales, y una revisi\'on de seguridad del sitio.
+\item \textbf{Adquisici\'on (semanas 3--4).} Medir EM y magnetometr\'ia, luego ERT/IP y GPR siguiendo el dise\~no (Tabla~\ref{tab:par}).
+\item \textbf{Procesamiento (semanas 5--6).} Invertir, mapear y aplicar la regla de interpretaci\'on. Con esto se eligen los puntos de perforaci\'on.
+\item \textbf{Confirmaci\'on (semanas 7--8).} Perforar piez\'ometros en los sitios que indique el mapa, medir el nivel del agua y tomar muestras de agua y suelo (conductividad, iones principales y metales), y compararlas con las anomal\'ias.
+\item \textbf{Modelo conceptual y riesgo.} Integrar todo en un modelo 3D: volumen de residuos, extensi\'on del lixiviado y direcci\'on del flujo. Esto es la base del estudio de da\~no que pidi\'o la PROFEPA.
+\item \textbf{Remediaci\'on y monitoreo.} Retirar los residuos peligrosos y biol\'ogico-infecciosos a sitios autorizados, sellar el relleno con una cubierta y control de lixiviados seg\'un la NOM-083-SEMARNAT-2003 \cite{nom083}, y repetir la ERT cada a\~no en los mismos perfiles para ver si el lixiviado se reduce \cite{helene2020}.
+\end{enumerate}
+
+La comunidad nahua de Coapan debe participar desde la preparaci\'on y recibir los resultados, porque es quien vive junto al sitio y quien lo ha reclamado por la v\'ia legal \cite{greenpeace}. La responsabilidad de la remediaci\'on, seg\'un la resoluci\'on, es del gobierno municipal de Tehuac\'an \cite{greenpeace}.
+
+\section{Conclusiones}
+\begin{itemize}
+\item El relleno de Santa Mar\'ia Coapan es un caso real, en Puebla, con clausura oficial y sin estudio de da\~no publicado. Los datos del subsuelo son justo lo que falta.
+\item Una combinaci\'on de ERT/IP, EM, magnetometr\'ia y GPR, con piez\'ometros, puede responder d\'onde est\'an los residuos y el lixiviado. La ERT es el m\'etodo central.
+\item La simulaci\'on indica que un perfil de 48 electrodos recupera bien la posici\'on y la resistividad del cuerpo de residuos, y ubica el lixiviado, pero sobreestima su resistividad (11 contra 6\,\ohmm) y lo extiende de m\'as en profundidad. Lo peque\~no (una bolsa de 20 por 4\,m) se ve apenas.
+\item Las sales y el yeso naturales del valle pueden parecerse al lixiviado. Por eso son indispensables un perfil de fondo y la confirmaci\'on con muestras de agua.
+\item Este trabajo no tiene datos de campo. Las cifras del caso (toneladas, hect\'areas, enfermedades) son afirmaciones sin verificar, y el pol\'igono real del sitio debe medirse antes de levantar.
+\end{itemize}
+
+\begin{thebibliography}{99}
+\bibitem{greenpeace} Greenpeace M\'exico, ``Crisis ambiental y de derechos humanos en Tehuac\'an, Puebla: Greenpeace y comunidad nahua de Santa Mar\'ia Coapan protestan por basurero t\'oxico y su falta de remediaci\'on,'' comunicado de prensa. [En l\'inea]. Disponible: https://www.greenpeace.org/mexico/
+\bibitem{linares} A. Linares D\'ector, ``El relleno sanitario de Tehuac\'an, Puebla: un estudio sociol\'ogico de la crisis del manejo de residuos, 2015--2022,'' tesis, Benem\'erita Univ. Aut\'onoma de Puebla. [En l\'inea]. Disponible: https://repositorioinstitucional.buap.mx/
+\bibitem{ciudadano} ``Incendio borra pruebas de que basurero en Coapan opera como tiradero t\'oxico: Comit\'e de Bienes,'' \textit{El Ciudadano}, 13 de mayo de 2022. [En l\'inea]. Disponible: https://www.elciudadano.com/
+\bibitem{publimetro} ``Cierre definitivo: relleno sanitario de Tehuac\'an es clausurado despu\'es de 25 a\~nos,'' \textit{Publimetro}, 13 de junio de 2022. [En l\'inea]. Disponible: https://www.publimetro.com.mx/puebla/
+\bibitem{desinformemonos} Comunicado ``Protesta ante PROFEPA: basureros de Tehuac\'an y Cholula,'' \textit{Desinform\'emonos}, 17 de julio de 2024. [En l\'inea]. Disponible: https://desinformemonos.org/
+\bibitem{gcatholic} GCatholic.org, ``Iglesia Santa Mar\'ia de la Asunci\'on, Santa Mar\'ia Coapan, Puebla,'' Plus Code 76C4CHGV+XJ. [En l\'inea]. Disponible: https://gcatholic.org/churches/mexico/66183
+\bibitem{davalos2007} O. G. D\'avalos-\'Alvarez, \'A. F. Nieto-Samaniego, S. A. Alaniz-\'Alvarez, E. Mart\'inez-Hern\'andez y E. Ram\'irez-Arriaga, ``Estratigraf\'ia cenozoica de la regi\'on de Tehuac\'an y su relaci\'on con el sector norte de la falla de Oaxaca,'' \textit{Rev. Mex. Cienc. Geol.}, vol. 24, n.\textsuperscript{o} 2, pp. 197--215, 2007.
+\bibitem{dof2013} Comisi\'on Nacional del Agua, ``Acuerdo por el que se actualiza la disponibilidad media anual de agua en acu\'iferos, incluido el Valle de Tehuac\'an (clave 2105),'' \textit{Diario Oficial de la Federaci\'on}, 5 de diciembre de 2013.
+\bibitem{abdulrahman2016} A. Abdulrahman \textit{et al.}, ``Characterization of active and closed landfill sites using 2D resistivity/IP imaging: case studies in Penang, Malaysia,'' \textit{Environ. Earth Sci.}, vol. 75, art. 347, 2016, doi:10.1007/s12665-015-5003-5.
+\bibitem{maurya2017} P. K. Maurya \textit{et al.}, ``Detailed landfill leachate plume mapping using 2D and 3D electrical resistivity tomography with correlation to ionic strength measured in screens,'' \textit{J. Appl. Geophys.}, vol. 138, pp. 1--8, 2017.
+\bibitem{helene2020} L. P. I. Helene, C. A. Moreira y R. C. Bovi, ``Identification of leachate infiltration and its flow pathway in landfill by means of electrical resistivity tomography (ERT),'' \textit{Environ. Monit. Assess.}, vol. 192, 2020, doi:10.1007/s10661-020-8206-5.
+\bibitem{rawfill} RAWFILL, ``SWOT analysis of geophysical methods for landfill characterisation,'' Interreg NWE, informe t\'ecnico. [En l\'inea]. Disponible: https://vb.nweurope.eu/
+\bibitem{edwards1977} L. S. Edwards, ``A modified pseudosection for resistivity and IP,'' \textit{Geophysics}, vol. 42, n.\textsuperscript{o} 5, pp. 1020--1036, 1977.
+\bibitem{loke1996} M. H. Loke y R. D. Barker, ``Rapid least-squares inversion of apparent resistivity pseudosections using a quasi-Newton method,'' \textit{Geophys. Prospect.}, vol. 44, n.\textsuperscript{o} 1, pp. 131--152, 1996.
+\bibitem{nom083} Secretar\'ia de Medio Ambiente y Recursos Naturales, ``NOM-083-SEMARNAT-2003: Especificaciones de protecci\'on ambiental para la selecci\'on del sitio, dise\~no, construcci\'on, operaci\'on, monitoreo, clausura y obras complementarias de un sitio de disposici\'on final de residuos s\'olidos urbanos y de manejo especial,'' \textit{Diario Oficial de la Federaci\'on}, 2004.
+\bibitem{natural} Natural Earth, ``Admin 1 -- States, Provinces,'' conjunto de datos vectoriales, dominio p\'ublico. [En l\'inea]. Disponible: https://www.naturalearthdata.com/
+\bibitem{phantom} PhantomInsights, ``mexico-geojson: l\'imites municipales de M\'exico (2020),'' repositorio de GitHub. [En l\'inea]. Disponible: https://github.com/PhantomInsights/mexico-geojson
+\end{thebibliography}
